@@ -11,7 +11,7 @@ class MarkTextOptions(options: ReadableMap) : Options(options) {
     if (waterMarkTextsMap!!.size() > 0) {
       watermarkTexts = arrayOfNulls(waterMarkTextsMap.size())
       for (i in 0 until waterMarkTextsMap.size()) {
-        val textMap = waterMarkTextsMap.getMap(i)
+        val textMap = waterMarkTextsMap.getMap(i)!!
         watermarkTexts[i] = TextOptions(textMap)
       }
     }
